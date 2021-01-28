@@ -1,0 +1,350 @@
+/* Global Variables */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  font-size: 14px;
+}
+
+/* Color Variables */
+
+/* Main Colors */
+
+$positive: hsl(163, 72%, 41%);
+$negative: hsl(356, 69%, 56%);
+
+/* Border Colors */
+
+$facebook: hsl(208, 92%, 53%);
+$twitter: hsl(203, 89%, 53%);
+$instagram: linear-gradient(
+  90deg,
+  hsl(37, 97%, 70%) 0%,
+  hsl(329, 70%, 58%) 100%
+);
+$youtube: hsl(348, 97%, 39%);
+
+/* Light Theme */
+
+$background-light: hsl(0, 0%, 100%);
+$top-background-light: hsl(225, 100%, 98%);
+$card-background-light: hsl(227, 47%, 96%);
+$sub-light: hsl(228, 12%, 44%);
+$main-light: hsl(230, 17%, 14%);
+$toggle-light: hsl(230, 22%, 74%);
+
+/* Dark Theme */
+
+$background-dark: hsl(230, 17%, 14%);
+$top-background-dark: hsl(232, 19%, 15%);
+$card-background-dark: hsl(228, 28%, 20%);
+$sub-dark: hsl(228, 34%, 66%);
+$main-dark: hsl(0, 0%, 100%);
+$toggle-dark: linear-gradient(
+  90deg,
+  hsl(210, 78%, 56%) 0%,
+  hsl(146, 68%, 55%) 100%
+);
+
+.positive {
+  color: $positive;
+}
+.negative {
+  color: $negative;
+}
+
+/* Body Section */
+
+body {
+  background: $background-light;
+}
+
+.top-background {
+  position: absolute;
+  background: $top-background-light;
+  height: 250px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.container {
+  position: relative;
+  margin: 2.5rem 1.5rem;
+}
+
+img {
+  width: 1.3rem;
+}
+
+/* Header Section */
+
+header {
+  margin-bottom: 2.5rem;
+
+  .title-wrapper {
+    border-bottom: 1px solid $sub-light;
+
+    h1 {
+      color: $main-light;
+      font-size: 1.5rem;
+    }
+
+    .followers {
+      color: $sub-light;
+      margin-top: 0.2rem;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+  .dark-mode-toggle {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      font-weight: 700;
+      color: $sub-light;
+      font-size: 0.9rem;
+    }
+    .toggle-wrapper {
+      background: $toggle-light;
+      width: 60px;
+      height: 32px;
+      position: relative;
+      border-radius: 50px;
+
+      .toggle-switch {
+        background: $top-background-light;
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        transition: transform 0.5s;
+      }
+    }
+  }
+}
+
+/* Primary Cards Section */
+
+.primary {
+  .card {
+    background: $card-background-light;
+    border-top: 4px solid;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem 0;
+
+    .user {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      color: $sub-light;
+
+      img {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .number {
+    margin-top: 1rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: $main-light;
+  }
+
+  .category {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: $sub-light;
+  }
+
+  .changes {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+
+    img {
+      margin-top: 2px;
+      width: 0.7rem;
+      margin-right: 0.4rem;
+    }
+  }
+
+  .fb {
+    border-color: $facebook;
+  }
+  .twitter {
+    border-color: $twitter;
+  }
+  .youtube {
+    border-color: $youtube;
+  }
+  .instagram {
+    border-image: $instagram;
+    border-image-slice: 1;
+  }
+}
+
+/* Sub-Heading */
+
+h2 {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  color: $sub-light;
+  font-size: 1.6rem;
+}
+
+/* Secondary Card Section */
+
+.secondary {
+  .card {
+    background: $card-background-light;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+
+    .category {
+      color: $sub-light;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    img {
+      justify-self: flex-end;
+    }
+
+    .number {
+      font-size: 2rem;
+      color: $main-light;
+      font-weight: 700;
+    }
+
+    .changes {
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      justify-self: flex-end;
+
+      img {
+        margin-top: 2px;
+        width: 0.7rem;
+        margin-right: 0.4rem;
+      }
+    }
+  }
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 600px) {
+  .primary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+
+  .secondary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .title-wrapper {
+      border: none;
+      margin: 0;
+
+      .title {
+        font-size: 1.8rem;
+      }
+
+      .followers {
+        margin-bottom: 0;
+      }
+    }
+
+    .dark-mode-toggle {
+      margin: 0;
+
+      .dark-mode {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .primary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+  }
+
+  .secondary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 1248px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Hover States */
+
+.card:hover,
+.toggle-wrapper:hover {
+  cursor: pointer;
+}
+
+.toggle-wrapper:hover {
+  background: $toggle-dark !important;
+}
+
+.dark-toggle-hover:hover {
+  background: hsl(232, 19%, 25%) !important;
+}
+
+.light-hover:hover {
+  background: hsl(227, 47%, 90%) !important;
+}
+
+.dark-hover:hover {
+  background: hsl(228, 28%, 30%) !important;
+}
